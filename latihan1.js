@@ -38,3 +38,29 @@ console.log(panggilDewasa);
 
 const baru = [...users, { id: 4, nama: "Salby", umur: 19 }];
 console.log(baru);
+
+// Soal 5 Update data tanpa mutasi
+const updateUmur = users.map((users) =>
+  users.id === 3 ? { ...users, umur: 20 } : users,
+);
+console.log(updateUmur);
+
+// soal 6 delete data
+const deleteUsers = users.filter((users) => users.id !== 2);
+
+console.log(deleteUsers);
+
+// Simulasi Todo APP
+const todos = [
+  { id: 1, text: "Belajar JS", done: false },
+  { id: 2, text: "Belajar React", done: false },
+  { id: 3, text: "Ngoding Project", done: false },
+];
+
+const ubahDone = todos.map((todos) =>
+  todos.id === 2 ? { ...todos, done: !todos.done } : todos,
+);
+console.log(ubahDone);
+// const updateUmur = users.map((users) =>
+//   users.id === 3 ? { ...users, umur: 20 } : users,
+// );
